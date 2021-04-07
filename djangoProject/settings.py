@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'users.apps.UsersConfig',
     'pages.apps.PagesConfig',
+    'books.apps.BooksConfig',
     'crispy_forms',
     'allauth',
     'allauth.account',
