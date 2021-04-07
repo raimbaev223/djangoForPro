@@ -35,13 +35,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',
-    'users.apps.UsersConfig',
-    'pages.apps.PagesConfig',
-    'books.apps.BooksConfig',
-    'crispy_forms',
-    'allauth',
-    'allauth.account',
+    'django.contrib.sites',  # new
+
+    # Third-party
+    'crispy_forms',  # new
+    'allauth',  # new
+    'allauth.account',  # new
+
+    # Local
+    'users',  # new
+    'pages',  # new
+    'books',  # new
 ]
 
 MIDDLEWARE = [
@@ -157,6 +161,5 @@ ACCOUNT_UNIQUE_EMAIL = True  # new
 
 DEFAULT_FROM_EMAIL = 'admin@djangobookstore.com'
 
-
-MEDIA_URL = '/media/' # new
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # new
+MEDIA_URL = '/media/'  # new
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # new
