@@ -35,17 +35,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites',  # new
+    'django.contrib.sites',
 
     # Third-party
-    'crispy_forms',  # new
-    'allauth',  # new
-    'allauth.account',  # new
+    'crispy_forms',
+    'allauth',
+    'allauth.account',
 
     # Local
-    'users',  # new
-    'pages',  # new
-    'books',  # new
+    'users',
+    'pages',
+    'books',
+    'orders',
 ]
 
 MIDDLEWARE = [
@@ -163,3 +164,8 @@ DEFAULT_FROM_EMAIL = 'admin@djangobookstore.com'
 
 MEDIA_URL = '/media/'  # new
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # new
+
+
+# Stripe
+STRIPE_TEST_PUBLISHABLE_KEY=os.environ.get('STRIPE_TEST_PUBLISHABLE_KEY')
+STRIPE_TEST_SECRET_KEY=os.environ.get('STRIPE_TEST_SECRET_KEY')
